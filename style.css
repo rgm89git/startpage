@@ -34,6 +34,7 @@ body {
     background-size: cover;
     background-image: url("./img/rindo.gif");
     background-position: 50% 50%;
+    image-rendering: pixelated;
 }
 .scbtn {
     position: absolute;
