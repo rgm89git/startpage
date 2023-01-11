@@ -2,4 +2,4 @@
 
 Não sei se vocês querem usar, mas se quiserem, tá aí.
 
-Feito com [YAGS](https://prettycoffee.github.io/yet-another-generic-startpage/)
+*Antes, era feito com [YAGS](https://prettycoffee.github.io/yet-another-generic-startpage/), mas agora foi totalmente refeito do zero.*
