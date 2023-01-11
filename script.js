@@ -1,3 +1,5 @@
+var clicked = false
+
 document.title = ">"
 
 $(document).ready(function(){
@@ -20,7 +22,16 @@ function clockUpdate(){
 }
 
 $("#nav li a").hover(function(){
-    document.title = "> " + $(this).text();
+    if(!clicked){
+        document.title = "> " + $(this).text();
+    }
 },function(){
-    document.title = ">";
+    if(!clicked){
+        document.title = ">";
+    }
 });
+
+$("#nav li a").click(function(){
+    clicked = true
+    document.title = "loading..."
+})
