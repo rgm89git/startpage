@@ -70,7 +70,21 @@ $("#nav li a").hover(function(){
     }
 });
 
+$(".scbtn").hover(function(){
+    if(!clicked){
+        document.title = "> source code";
+    }
+},function(){
+    if(!clicked){
+        document.title = ">";
+    }
+});
+
 $("#nav li a").click(function(){
+    clicked = true
+    document.title = "loading..."
+});
+$(".scbtn a").click(function(){
     clicked = true
     document.title = "loading..."
 });
