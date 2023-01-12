@@ -25,23 +25,28 @@ body {
 }
 
 #background {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 60vh;
-    background-color: var(--accent-color);
+    background-color: var(--background-color);
     background-size: cover;
-    background-image: url("./img/rindo.gif");
     background-position: 50% 50%;
+}
+#background.pixelated {
     image-rendering: pixelated;
+}
+#background.clickable {
+    cursor: pointer;
 }
 .scbtn {
     position: absolute;
     top: 15px;
     left: 15px;
     background-color: var(--background-color);
-    z-index: 3;
+    z-index: 4;
 }
 .scbtn a {
     display: block;
@@ -59,6 +64,7 @@ body {
     top: 0;
     left: 0;
     display: flex;
+    overflow: hidden;
     
     justify-content: left;
     align-items: flex-end;
@@ -69,6 +75,7 @@ body {
     max-width: 13rem;
     display: flex;
     padding: 5px;
+    z-index: 2;
     
     flex-direction: column;
     background-color: var(--background-color);
@@ -104,11 +111,19 @@ body {
     position: absolute;
     right: 5px;
     bottom: 5px;
-    font-size: 12rem;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
 }
-#clock #clockspan {
-    line-height: 0%;
-    z-index: -3;
+#clock span {
     user-select: none;
     color: rgba(255,255,255,.25);
+}
+#clock #clockspan {
+    font-size: 12rem;
+}
+#clock #datespan {
+    line-height: 50%;
+    font-size: 3rem;
 }
